@@ -1,0 +1,592 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: black;
+}
+
+.nav_about {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+    font-family: 'Montserrat', sans-serif;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nav_about > li {
+    display: inline-flex;
+}
+.nav_about > li + li {
+    margin-left: 40px;
+}
+.nav_about > li > a {
+    padding: 0 0 15px 0;
+    position: relative;
+    text-transform: uppercase;   
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    font-size: 25px;
+    text-decoration: none;   
+}
+.nav_about > li > a:hover {
+    text-decoration: none;   
+    color: brown;
+}
+.nav_about > li > a:after {
+    width: 0;
+    height: 3px;
+    background-color: brown;
+    content: '';
+    left: 0;
+    bottom: 10px;
+    position: absolute;
+    transition: all .3s;
+}
+.nav_about > li > a:hover::after {
+    width: 100%;
+}
+.nav_about li {
+    margin: 0;
+    white-space: nowrap;
+}
+.nav_about li.menu-children {
+    position: relative;
+    margin-right: 12px;
+}
+.nav_about li.menu-children:after {
+    position: absolute;
+    content: "\2039";
+    color: brown;
+    font-size: 20px;
+    font-weight: bold;
+    right: -12px;
+    top: -2px;
+    transform: rotate(-90deg);
+}
+.nav_about li li.menu-children:after {
+    position: absolute;
+    content: "\2039";
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    right: 10px;
+    top: 12px;
+    transform: rotate(180deg);
+}
+.nav_about li.menu-children:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.nav_about ul {
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+    background-color: brown;
+    position: absolute;
+    z-index: 20;
+    min-width: 220px;
+    top: 100%;
+    left: -30px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: all 200ms cubic-bezier(0.43, 0.59, 0.16, 1.25);
+}
+.nav_about ul li {
+    display: block;
+    padding: 0 10px;
+    line-height: 1.1;
+}
+.nav_about ul li:last-child {
+    margin-bottom: 0;
+}
+.nav_about ul li a {
+    display: block;
+    color: black;
+    padding: 10px;
+    transition: all .3s;
+    text-decoration: none;   
+}
+.nav_about ul li a:hover {
+    color: brown;
+    background: black;
+    text-decoration: none;   
+}
+.nav_about ul ul {
+    top: 0;
+    left: 100%;
+}
+
+.underphotos{
+    position: absolute;
+    top: 100px;
+}
+.underphoto1{          /*НАМДЖУН*/
+    position: absolute;
+    width: 1356px;
+}
+.underphoto2{          /*ДЖИН*/
+    position: absolute;
+    padding-top: 820px;
+    width: 1356px;
+}
+.underphoto3{          /*ШУГА*/
+    position: absolute;
+    padding-top: 1640px;
+    width: 1356px;
+}
+.underphoto4{          /*ХОСОК*/
+    position: absolute;
+    padding-top: 2460px;
+    width: 1356px;
+}
+.underphoto5{          /*ЧИМИН*/
+    position: absolute;
+    padding-top: 3280px;
+    width: 1356px;
+}
+.underphoto6{          /*ТЭХЕН*/
+    position: absolute;
+    padding-top: 4100px;
+    width: 1356px;
+}
+.underphoto7{          /*ЧОНГУК*/
+    position: absolute;
+    padding-top: 4920px;
+    width: 1356px;
+}
+
+.word1{
+    color: rgb(66, 123, 146);
+    position: absolute;
+    padding-left: 100px;
+    padding-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+}
+.word1-1{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    padding-left: 100px;
+    padding-top: 160px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+    text-shadow: rgb(26, 150, 199) 0 0 20px;
+}
+.word2{
+    color: rgb(66, 123, 146);
+    position: absolute;
+    left: 100px;
+    top: 150%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+}
+.word2-2{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 100px;
+    top: 160%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+    text-shadow: rgb(26, 150, 199) 0 0 20px;
+}
+.word3{
+    color: rgb(66, 123, 146);
+    position: absolute;
+    left: 100px;
+    top: 275%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+}
+.word3-3{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 100px;
+    top: 284%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+    text-shadow: rgb(26, 150, 199) 0 0 20px;
+}
+.word4{
+    color: rgb(66, 123, 146);
+    position: absolute;
+    left: 100px;
+    top: 400%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+}
+.word4-4{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 100px;
+    top: 409%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+    text-shadow: rgb(26, 150, 199) 0 0 20px;
+}
+.word5{
+    color: rgb(66, 123, 146);
+    position: absolute;
+    left: 100px;
+    top: 525%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+}
+.word5-5{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 100px;
+    top: 534%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+    text-shadow: rgb(26, 150, 199) 0 0 20px;
+}
+.word6{
+    color: rgb(66, 123, 146);
+    position: absolute;
+    left: 100px;
+    top: 649%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+}
+.word6-6{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 100px;
+    top: 658%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+    text-shadow: rgb(26, 150, 199) 0 0 20px;
+}
+.word7{
+    color: rgb(66, 123, 146);
+    position: absolute;
+    left: 100px;
+    top: 774%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+}
+.word7-7{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 100px;
+    top: 783%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 260%;
+    text-shadow: rgb(26, 150, 199) 0 0 20px;
+}
+
+.info1{
+    position: absolute;
+    top: 320px;
+    left: 90px;
+}
+.info2{
+    position: absolute;
+    top: 172%;
+    left: 90px;
+}
+.info3{
+    position: absolute;
+    top: 297%;
+    left: 90px;
+}
+.info4{
+    position: absolute;
+    top: 422%;
+    left: 90px;
+}
+.info5{
+    position: absolute;
+    top: 547%;
+    left: 90px;
+}
+.info6{
+    position: absolute;
+    top: 671%;
+    left: 90px;
+}
+.info7{
+    position: absolute;
+    top: 796%;
+    left: 90px;
+}
+
+.tab1{
+    padding-left: 10px;
+    width: 500px;
+    border: none;
+}
+.tab2{
+    padding-left: 10px;
+    width: 580px;
+    border: none;
+}
+.tab3{
+    padding-left: 10px;
+    width: 580px;
+    border: none;
+}
+.tab4{
+    padding-left: 10px;
+    width: 720px;
+    border: none;
+}
+.tab5{
+    padding-left: 10px;
+    width: 700px;
+    border: none;
+}
+.tab6{
+    padding-left: 10px;
+    width: 700px;
+    border: none;
+}
+.tab7{
+    padding-left: 10px;
+    width: 600px;
+    border: none;
+}
+
+.tab1 button{
+    text-align: center;
+    color: black;
+    background-color: inherit;
+    border-radius: 10px;
+    box-shadow: rgb(26, 150, 199) 0 10px 30px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 25px;
+    transition: 0.3s;
+    font-size: 35px;
+}
+.tab2 button{
+    text-align: center;
+    color: black;
+    background-color: inherit;
+    border-radius: 10px;
+    box-shadow: rgb(26, 150, 199) 0 10px 30px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 25px;
+    transition: 0.3s;
+    font-size: 35px;
+}
+.tab3 button{
+    text-align: center;
+    color: black;
+    background-color: inherit;
+    border-radius: 10px;
+    box-shadow: rgb(26, 150, 199) 0 10px 30px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 25px;
+    transition: 0.3s;
+    font-size: 35px;
+}
+.tab4 button{
+    text-align: center;
+    color: black;
+    background-color: inherit;
+    border-radius: 10px;
+    box-shadow: rgb(26, 150, 199) 0 10px 30px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 25px;
+    transition: 0.3s;
+    font-size: 35px;
+}
+.tab5 button{
+    text-align: center;
+    color: black;
+    background-color: inherit;
+    border-radius: 10px;
+    box-shadow: rgb(26, 150, 199) 0 10px 30px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 25px;
+    transition: 0.3s;
+    font-size: 35px;
+}
+.tab6 button{
+    text-align: center;
+    color: black;
+    background-color: inherit;
+    border-radius: 10px;
+    box-shadow: rgb(26, 150, 199) 0 10px 30px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 25px;
+    transition: 0.3s;
+    font-size: 35px;
+}
+.tab7 button{
+    text-align: center;
+    color: black;
+    background-color: inherit;
+    border-radius: 10px;
+    box-shadow: rgb(26, 150, 199) 0 10px 30px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 25px;
+    transition: 0.3s;
+    font-size: 35px;
+}
+
+.tab1 button:hover{
+    background-color: rgb(144, 183, 194);
+}
+.tab1 button.active{
+    background-color: rgb(142, 161, 214);
+}
+.tab2 button:hover{
+    background-color: rgb(144, 183, 194);
+}
+.tab2 button.active{
+    background-color: rgb(142, 161, 214);
+}
+.tab3 button:hover{
+    background-color: rgb(144, 183, 194);
+}
+.tab3 button.active{
+    background-color: rgb(142, 161, 214);
+}
+.tab4 button:hover{
+    background-color: rgb(144, 183, 194);
+}
+.tab4 button.active{
+    background-color: rgb(142, 161, 214);
+}
+.tab5 button:hover{
+    background-color: rgb(144, 183, 194);
+}
+.tab5 button.active{
+    background-color: rgb(142, 161, 214);
+}
+.tab6 button:hover{
+    background-color: rgb(144, 183, 194);
+}
+.tab6 button.active{
+    background-color: rgb(142, 161, 214);
+}
+.tab7 button:hover{
+    background-color: rgb(144, 183, 194);
+}
+.tab7 button.active{
+    background-color: rgb(142, 161, 214);
+}
+
+.tabcontent1{
+    color: white;
+    display: none;
+    padding: 20px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    font-size: 20px;
+}
+.tabcontent2{
+    color: white;
+    display: none;
+    padding: 20px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    font-size: 20px;
+}
+.tabcontent3{
+    color: white;
+    display: none;
+    padding: 20px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    font-size: 20px;
+}
+.tabcontent4{
+    color: white;
+    display: none;
+    padding: 20px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    font-size: 20px;
+}
+.tabcontent5{
+    color: white;
+    display: none;
+    padding: 20px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    font-size: 20px;
+}
+.tabcontent6{
+    color: white;
+    display: none;
+    padding: 20px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    font-size: 20px;
+}
+.tabcontent7{
+    color: white;
+    display: none;
+    padding: 20px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    font-size: 20px;
+}
+@-webkit-keyframes fadeEffect{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes fadeEffect{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.line1{
+    position: absolute;
+    padding-top: 50px;
+    width: 700px;
+    background-color: black;
+    border-color: black;
+    top: 5783px;
+    width: 1347px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+   
+::-webkit-scrollbar-thumb{
+    background: brown; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(118, 31, 31); 
+}
+
+a.back-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	background: brown url("Картинки/up-arrow.png") no-repeat center 43%;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+a:hover.back-to-top {
+	background-color: #000;
+}

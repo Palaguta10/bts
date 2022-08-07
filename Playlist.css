@@ -1,0 +1,819 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: TEXT;
+    src: url(fonts/SedgwickAve-Regular.ttf);
+}
+
+.nav_about {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+    font-family: 'Montserrat', sans-serif;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nav_about > li {
+    display: inline-flex;
+}
+.nav_about > li + li {
+    margin-left: 40px;
+}
+.nav_about > li > a {
+    padding: 0 0 15px 0;
+    position: relative;
+    text-transform: uppercase;   
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    font-size: 25px;
+    text-decoration: none;   
+}
+.nav_about > li > a:hover {
+    text-decoration: none;   
+    color: brown;
+}
+.nav_about > li > a:after {
+    width: 0;
+    height: 3px;
+    background-color: brown;
+    content: '';
+    left: 0;
+    bottom: 10px;
+    position: absolute;
+    transition: all .3s;
+}
+.nav_about > li > a:hover::after {
+    width: 100%;
+}
+.nav_about li {
+    margin: 0;
+    white-space: nowrap;
+}
+.nav_about li.menu-children {
+    position: relative;
+    margin-right: 12px;
+}
+.nav_about li.menu-children:after {
+    position: absolute;
+    content: "\2039";
+    color: brown;
+    font-size: 20px;
+    font-weight: bold;
+    right: -12px;
+    top: -2px;
+    transform: rotate(-90deg);
+}
+.nav_about li li.menu-children:after {
+    position: absolute;
+    content: "\2039";
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    right: 10px;
+    top: 12px;
+    transform: rotate(180deg);
+}
+.nav_about li.menu-children:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.nav_about ul {
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+    background-color: brown;
+    position: absolute;
+    z-index: 20;
+    min-width: 220px;
+    top: 100%;
+    left: -30px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: all 200ms cubic-bezier(0.43, 0.59, 0.16, 1.25);
+}
+.nav_about ul li {
+    display: block;
+    padding: 0 10px;
+    line-height: 1.1;
+}
+.nav_about ul li:last-child {
+    margin-bottom: 0;
+}
+.nav_about ul li a {
+    display: block;
+    color: white;
+    padding: 10px;
+    transition: all .3s;
+    text-decoration: none;   
+}
+.nav_about ul li a:hover {
+    color: brown;
+    background: white;
+    text-decoration: none;   
+}
+.nav_about ul ul {
+    top: 0;
+    left: 100%;
+}
+
+.notcolor{
+    position: absolute;
+    top: 380%;
+    color: black;
+}
+
+body{
+    background: black;
+}
+.album1{
+    position: absolute;
+    top: 120px;
+    left: 160px;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    color: #d5eebb;
+}
+
+figure.card1{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    max-width: 100%;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+    font-size: 0;
+}
+figure.card1 img{
+    transition: all 300ms;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+figure.card1:hover img{
+    transition: all 700ms;
+    transform: scale(1.1);
+}
+figure.card1 figcaption{
+    position: absolute;
+    background: rgb(0, 0, 0);
+    transition: transform 300ms;
+    padding: 12px;
+}
+figure.card1:hover figcaption{
+    transform: translateY(0);
+}
+figure.info1-bottom1:hover img{
+    top: -40px;
+}
+figure.info1-bottom1 figcaption{
+    bottom: 0;
+    transform: translateY(100%);
+    border-top: 6px solid rgb(0, 0, 0);
+}
+figure.info1-bottom1 figcaption{
+    width: 100%;
+}
+figure.card1 figcaption .iinfo1 span{
+    font-size: 17px;
+    font-family: Verdana, sans-serif;
+    display: block;
+}
+
+.first{
+    position: absolute;
+    top: 72px;
+    left: 650px;
+    width: 577px;
+}
+
+.sidenav1{
+    height: 43%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 125px;
+    left: 550px;
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.sidenav1 a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav1 a:hover{
+    color: #ffffff;
+}
+.sidenav1 .closebtn1{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.name1{
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    color: brown;
+    text-decoration: none;
+    font-family: TEXT;
+    display: block;
+    font-size: 250%;
+}
+
+
+.batton1{
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    width: 80px;
+    height: 80px;
+}
+.batton1 path{
+    fill: #f7c299;
+    stroke-width: .6;
+    stroke: brown;
+    transition: fill 0.5s ease-out;
+    cursor: pointer;
+}
+.batton1 path:hover{
+    fill: brown;
+}
+
+.album2{
+    position: absolute;
+    top: 600px;
+    left: 160px;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    color: #d5eebb;
+}
+
+figure.card2{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    max-width: 100%;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+    font-size: 0;
+}
+figure.card2 img{
+    transition: all 300ms;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+figure.card2:hover img{
+    transition: all 700ms;
+    transform: scale(1.1);
+}
+figure.card2 figcaption{
+    position: absolute;
+    background: rgb(0, 0, 0);
+    transition: transform 300ms;
+    padding: 12px;
+}
+figure.card2:hover figcaption{
+    transform: translateY(0);
+}
+figure.info2-bottom2:hover img{
+    top: -40px;
+}
+figure.info2-bottom2 figcaption{
+    bottom: 0;
+    transform: translateY(100%);
+    border-top: 6px solid rgb(0, 0, 0);
+}
+figure.info2-bottom2 figcaption{
+    width: 100%;
+}
+figure.card2 figcaption .iinfo2 span{
+    font-size: 17px;
+    font-family: Verdana, sans-serif;
+    display: block;
+}
+
+.second{
+    position: absolute;
+    top: 550px;
+    left: 640px;
+    width: 640px;
+}
+
+.sidenav2{
+    height: 43%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 600px;
+    left: 550px;
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.sidenav2 a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav2 a:hover{
+    color: #ffffff;
+}
+.sidenav2 .closebtn2{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.name2{
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    color: brown;
+    text-decoration: none;
+    font-family: TEXT;
+    display: block;
+    font-size: 250%;
+}
+
+
+.batton2{
+    position: absolute;
+    top: 113%;
+    left: 50px;
+    width: 80px;
+    height: 80px;
+}
+.batton2 path{
+    fill: #f7c299;
+    stroke-width: .6;
+    stroke: brown;
+    transition: fill 0.5s ease-out;
+    cursor: pointer;
+}
+.batton2 path:hover{
+    fill: brown;
+}
+
+.album3{
+    position: absolute;
+    top: 165%;
+    left: 160px;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    color: #d5eebb;
+}
+
+figure.card3{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    max-width: 100%;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+    font-size: 0;
+}
+figure.card3 img{
+    transition: all 300ms;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+figure.card3:hover img{
+    transition: all 700ms;
+    transform: scale(1.1);
+}
+figure.card3 figcaption{
+    position: absolute;
+    background: rgb(0, 0, 0);
+    transition: transform 300ms;
+    padding: 12px;
+}
+figure.card3:hover figcaption{
+    transform: translateY(0);
+}
+figure.info3-bottom3:hover img{
+    top: -40px;
+}
+figure.info3-bottom3 figcaption{
+    bottom: 0;
+    transform: translateY(100%);
+    border-top: 6px solid rgb(0, 0, 0);
+}
+figure.info3-bottom3 figcaption{
+    width: 100%;
+}
+figure.card3 figcaption .iinfo3 span{
+    font-size: 17px;
+    font-family: Verdana, sans-serif;
+    display: block;
+}
+
+.third{
+    position: absolute;
+    top: 154.5%;
+    left: 650px;
+    width: 565px;
+}
+
+.sidenav3{
+    height: 43%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 165%;
+    left: 550px;
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.sidenav3 a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav3 a:hover{
+    color: #ffffff;
+}
+.sidenav3 .closebtn3{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.name3{
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    color: brown;
+    text-decoration: none;
+    font-family: TEXT;
+    display: block;
+    font-size: 250%;
+}
+
+
+.batton3{
+    position: absolute;
+    top: 185%;
+    left: 50px;
+    width: 80px;
+    height: 80px;
+}
+.batton3 path{
+    fill: #f7c299;
+    stroke-width: .6;
+    stroke: brown;
+    transition: fill 0.5s ease-out;
+    cursor: pointer;
+}
+.batton3 path:hover{
+    fill: brown;
+}
+
+.album4{
+    position: absolute;
+    top: 240%;
+    left: 160px;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    color: #d5eebb;
+}
+
+figure.card4{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    max-width: 100%;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+    font-size: 0;
+}
+figure.card4 img{
+    transition: all 300ms;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+figure.card4:hover img{
+    transition: all 700ms;
+    transform: scale(1.1);
+}
+figure.card4 figcaption{
+    position: absolute;
+    background: rgb(0, 0, 0);
+    transition: transform 300ms;
+    padding: 12px;
+}
+figure.card4:hover figcaption{
+    transform: translateY(0);
+}
+figure.info4-bottom4:hover img{
+    top: -40px;
+}
+figure.info4-bottom4 figcaption{
+    bottom: 0;
+    transform: translateY(100%);
+    border-top: 6px solid rgb(0, 0, 0);
+}
+figure.info4-bottom4 figcaption{
+    width: 100%;
+}
+figure.card4 figcaption .iinfo4 span{
+    font-size: 17px;
+    font-family: Verdana, sans-serif;
+    display: block;
+}
+
+.forth{
+    position: absolute;
+    top: 238%;
+    left: 650px;
+    width: 590px;
+}
+
+.sidenav4{
+    height: 43%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 240%;
+    left: 550px;
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.sidenav4 a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav4 a:hover{
+    color: #ffffff;
+}
+.sidenav4 .closebtn4{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.name4{
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    color: brown;
+    text-decoration: none;
+    font-family: TEXT;
+    display: block;
+    font-size: 250%;
+}
+
+
+.batton4{
+    position: absolute;
+    top: 260%;
+    left: 50px;
+    width: 80px;
+    height: 80px;
+}
+.batton4 path{
+    fill: #f7c299;
+    stroke-width: .6;
+    stroke: brown;
+    transition: fill 0.5s ease-out;
+    cursor: pointer;
+}
+.batton4 path:hover{
+    fill: brown;
+}
+
+.album5{
+    position: absolute;
+    top: 315%;
+    left: 160px;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    color: #d5eebb;
+}
+
+figure.card5{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    max-width: 100%;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+    font-size: 0;
+}
+figure.card5 img{
+    transition: all 300ms;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+figure.card5:hover img{
+    transition: all 700ms;
+    transform: scale(1.1);
+}
+figure.card5 figcaption{
+    position: absolute;
+    background: rgb(0, 0, 0);
+    transition: transform 300ms;
+    padding: 12px;
+}
+figure.card5:hover figcaption{
+    transform: translateY(0);
+}
+figure.info5-bottom5:hover img{
+    top: -40px;
+}
+figure.info5-bottom5 figcaption{
+    bottom: 0;
+    transform: translateY(100%);
+    border-top: 6px solid rgb(0, 0, 0);
+}
+figure.info5-bottom5 figcaption{
+    width: 100%;
+}
+figure.card5 figcaption .iinfo5 span{
+    font-size: 17px;
+    font-family: Verdana, sans-serif;
+    display: block;
+}
+
+.fiveth{
+    position: absolute;
+    top: 313%;
+    left: 680px;
+    width: 520px;
+}
+
+.sidenav5{
+    height: 43%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 315%;
+    left: 550px;
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.sidenav5 a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav5 a:hover{
+    color: #ffffff;
+}
+.sidenav5 .closebtn5{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.name5{
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    color: brown;
+    text-decoration: none;
+    font-family: TEXT;
+    display: block;
+    font-size: 250%;
+}
+
+
+.batton5{
+    position: absolute;
+    top: 335%;
+    left: 50px;
+    width: 80px;
+    height: 80px;
+}
+.batton5 path{
+    fill: #f7c299;
+    stroke-width: .6;
+    stroke: brown;
+    transition: fill 0.5s ease-out;
+    cursor: pointer;
+}
+.batton5 path:hover{
+    fill: brown;
+}
+
+audio{
+    width: 700px;
+}
+audio::-webkit-media-controls-panel {
+    background: brown;
+}
+.audio-name{
+    color: white;
+    font-size: 130%;
+    padding-left: 18px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+   
+::-webkit-scrollbar-thumb{
+    background: brown; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(118, 31, 31); 
+}
+
+a.back-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	background: brown url("Картинки/up-arrow.png") no-repeat center 43%;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+a:hover.back-to-top {
+	background-color: #000;
+}
